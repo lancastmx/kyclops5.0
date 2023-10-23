@@ -1,0 +1,48 @@
+<div class="container-fluid mb-6">
+  <!-- TEXT MEXICO -->
+  <div class="col text-center">
+    <h2 class="text-light ">¡<b>México</b> sonando!</h2>
+  </div>
+  <!-- REPRODUCTOR -->
+  <div class="row">
+    <div class="player1">
+      <div class="image-container">
+        <img (click)="play()" style="cursor: pointer;" src="assets/img/Rrepro.svg"
+        alt="Imagen de Fondo" class="ba" [ngClass]="!isPlaying ? 'ani' : 'ba'" />
+      </div>
+      <div class="row" *ngIf="isPlaying">
+        <blockquote class="blockquote">
+          <h3 class="text-light mt-1">{{ tituloServer }}</h3>
+        </blockquote>
+        <figure class="text-aling-left  ">
+          <figcaption class=" fw-lighter blockquote-footer mb-0">
+            {{ nombreArtista }}<cite title="Source Title"></cite>
+
+          </figcaption>
+        </figure>
+
+        <div class="col ">
+          <div class="player mt-1">
+            <div  class="player-controls me-1" #playButton (click)="play()">
+              <i class="fas" [ngClass]="isPlaying ? 'fa-pause' : 'fa-play'"></i>
+            </div>
+            <input *ngIf="isPlaying" type="range" class="vo" min="5" max="80" step="2" value="45"
+            (input)="adjustarVolumen($event)">
+          </div>
+        </div>
+      </div>
+
+
+          <!-- <div *ngIf="isPlaying" class="player-volume" #playButton (click)="play()">
+            <i class="fas" [ngClass]="isPlaying ? 'fa-volume-up' : 'fa-solid fa-volume-xmark'"></i>
+          </div> -->
+          <!-- <div *ngIf="isPlaying" class="col d-flex justify-content-end mt-0 mb-2">
+            <div #coraButton (click)="cora()">
+              <i class="fa-regular fa-heart heart-icon me-2"></i>
+            </div>
+            <i role="button" (click)="this.compartir();" class="share fa-solid fa-share-nodes me-4"></i>
+          </div> -->
+
+    </div>
+  </div>
+</div>

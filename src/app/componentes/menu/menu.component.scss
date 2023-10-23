@@ -1,0 +1,310 @@
+@import url("https://fonts.googleapis.com/css?family=Poiret+One");
+@import '~@fortawesome/fontawesome-free/css/all.css';
+
+$primary-color: #f6303e;
+$menu-text-color: white;
+$background-color-hover: #555354  ;
+
+
+
+
+.menu-icon {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 12rem;
+  height: 12rem;
+  color: $primary-color;
+  transform: skewX(45deg);
+  -webkit-transform: skewX(45deg);
+  -ms-transform: skewX(45deg);
+  -webkit-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  transform-origin: 0 0;
+  z-index: 20;
+
+
+  .fa-bars {
+    position: absolute;
+    top: 1.5rem;
+    left: 5rem;
+    font-size: 4rem;
+    // transform: skewX(-15deg);
+    transform: skewy(-45deg);
+    cursor: pointer;
+    @media only screen and (max-width: 700px) {
+      font-size: 3rem;
+    }
+  }
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 88%;
+    height: 100%;
+    background-color: rgb(0, 0, 0);
+    transform: skew(-45deg);
+
+
+  }
+  &:hover:before {
+    -webkit-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    transform: translateX(-100%);
+
+
+  }
+}
+
+.menu {
+
+  position: fixed;
+  top: 0;
+  left: 100%;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  opacity: 0;
+
+  -webkit-transition: -webkit-transform 0.5s, opacity 0.4s;
+  -ms-transition: transform 0.5s, opacity 0.4s;
+  transition: transform 0.5s, opacity 0.4s;
+  min-width: 65rem;
+  &.open {
+    opacity: 1;
+    -webkit-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    transform: translateX(-100%);
+
+  }
+  .menu-wrap {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 85%;
+    height: 100%;
+    color: $primary-color;
+    transform: skewX(45deg);
+    -webkit-transform: skewX(45deg);
+    -ms-transform: skewX(45deg);
+    -webkit-transform-origin: 0 0;
+    -ms-transform-origin: 0 0;
+    transform-origin: 0 0;
+    background-color: rgb(238, 234, 234);
+
+  }
+
+
+
+
+
+  .menu-overlay {
+    position: absolute;
+    top: 7rem;
+    right: 5rem;
+    z-index: 10;
+
+    .menu-item {
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      position: relative;
+      display: block;
+      font-size: 3.1rem;
+      font-weight: bold;
+      line-height: 4.5rem;
+      padding-top: 1rem;
+      padding-right: 5rem;
+      color: $primary-color;
+      cursor: pointer;
+
+
+
+      a {
+        &:before {
+          content: attr(data-item);
+          position: absolute;
+          top: 0;
+          left: 0;
+          max-width: 0;
+          overflow: hidden;
+          text-align: right;
+          -webkit-transition: max-width 0.4s;
+          -ms-transition: max-width 0.7s;
+          transition: max-width 0.7s;
+          padding-top: 10px;
+          padding-bottom: 3px;
+          color: $menu-text-color;
+          background-color: $background-color-hover;
+          z-index: 30;
+          border-radius: 0px 4px 17px 7px;
+
+        }
+        &:hover:before {
+          max-width: 115%;
+        }
+      }
+    }
+  }
+}
+.badge-sonar {
+  display: inline-block;
+  background: #d40c0c;
+  border-radius: 50%;
+  height: 7px;
+  width: 7px;
+  position: absolute;
+  top: 37px;
+    left: 30px;
+}
+
+.badge-sonar:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 2px solid #980303;
+  opacity: 0%;
+  border-radius: 50%;
+  width: 102%;
+  height: 102%;
+  animation: sonar 1.5s infinite;
+}
+
+@keyframes sonar {
+  0% {
+    transform: scale(1);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+
+
+.menu-logo {
+  max-width: 100px; /* Ajusta el tamaño según sea necesario */
+  margin: 1rem auto; /* Ajusta el margen según sea necesario */
+  display: block;
+}
+
+.social-icons {
+  position: absolute;
+  bottom: 14rem; /* Ajusta la posición vertical según sea necesario */
+  left: 62rem;
+  font-size: 25px;
+}
+
+.social-link {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  background-color:rgba(138, 136, 131, 0.95);
+  opacity: 70%;
+  color: rgb(240, 8, 8);
+  text-align: center;
+  line-height: 30px;
+  margin-right: 3rem; /* Ajusta el margen entre iconos según sea necesario */
+  border-radius: 50%;
+  transition: background-color 0.3s, transform 0.3s;
+
+}
+
+.social-link:hover {
+  background-color: $background-color-hover;
+  transform: scale(1.4);
+  color: aliceblue;
+}
+// .row{
+
+// /* Estilos para laptops (992px de ancho o más) */
+// @media (min-width: 992px) {
+// .menu-icon{
+//   display: none;
+// }
+
+//   .menu-wrap {
+//     transform: none;
+//     position: static;
+//     position: absolute;
+//     top: 0;
+//     right: 0;
+//     width: 25%;
+//     height: 100%;
+//     color: $primary-color;
+//     -webkit-transform-origin: 0 0;
+//     -ms-transform-origin: 0 0;
+//     transform-origin: 0 0;
+//     background-color: rgb(248, 241, 241);
+//   }
+
+//   .menu-overlay {
+//     position: static; /* Cambia a posición estática para ocupar espacio lateralmente */
+//   }
+//   .menu-overlay {
+//     position: absolute;
+//     top: 7rem;
+//     right: 5rem;
+//     z-index: 10;
+
+//     .menu-item {
+//       a {
+//         color: inherit;
+//         text-decoration: none;
+//       }
+//       position: relative;
+//       display: block;
+//       font-size: 3.1rem;
+//       font-weight: bold;
+//       line-height: 4.5rem;
+//       padding-top: 1rem;
+//       padding-right: 5rem;
+//       color: $primary-color;
+//       cursor: pointer;
+
+
+
+//       a {
+//         &:before {
+//           content: attr(data-item);
+//           position: absolute;
+//           top: 0;
+//           left: 0;
+//           max-width: 0;
+//           overflow: hidden;
+//           text-align: right;
+//           -webkit-transition: max-width 0.4s;
+//           -ms-transition: max-width 0.7s;
+//           transition: max-width 0.7s;
+//           padding-top: 10px;
+//           padding-bottom: 3px;
+//           color: $menu-text-color;
+//           background-color: $background-color-hover;
+//           z-index: 30;
+//           border-radius: 0px 4px 17px 7px;
+
+//         }
+//         &:hover:before {
+//           max-width: 115%;
+//         }
+//       }
+//     }
+//   }
+
+//   .social-icons{
+//     position: absolute;
+//     bottom: 3rem;
+//     left: 84rem;
+//     font-size: 50px;
+//   }
+// }
+// }

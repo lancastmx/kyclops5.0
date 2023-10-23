@@ -1,0 +1,6 @@
+{
+  "/api": {
+    "target": "http://api.kyclopsradio.com",
+    "secure": false
+  }
+}

@@ -1,0 +1,20 @@
+<!-- marca-carousel.component.html -->
+
+<div id="marcas" class="container-fluid">
+
+<div class="col text-center mb-2">
+  <h1 class="title">¡Unidos por la <b>Música!</b></h1>
+</div>
+  <div #carMarcas class="row mt-2 ">
+  <ngx-slick-carousel class="corousel px-0"
+  #slickModal="slick-carousel"
+  [config]="slideConfig">
+
+    <div ngxSlickItem *ngFor="let slide of slides" class="marca-item">
+      <img [src]="slide.imagen" [alt]="slide.nombre" class="img-fluid px-2" />
+    </div>
+</ngx-slick-carousel>
+</div>
+
+
+</div>

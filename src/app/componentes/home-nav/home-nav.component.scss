@@ -1,0 +1,254 @@
+// #mainnav ul {
+//   padding-left: 1em;
+//   position: fixed;
+//   bottom: 0;
+//   font-weight: 300;
+//   z-index: 100;
+//   min-width: 20em;
+// }
+
+// #mainnav li {
+//   list-style: none;
+//   margin: 0.5em 0 0;
+//   font-size: 1.75em;
+//   transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+// }
+// #mainnav li:hover {
+//   transform: scale(1.05);
+//   opacity: 0.8;
+//   transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+// }
+
+// #mainnav li:hover span {
+//   opacity: 0.8;
+//   transition: 0.5s;
+// }
+
+// #mainnav li.invisible {
+//   transform: translateY(30px);
+//   opacity: 0;
+//   visibility: hidden;
+//   transition: transform 0.6s ease-in-out, opacity 0.6s ease-in-out;
+// }
+
+// #mainnav li.animate {
+//   transform: translateY(0);
+//   opacity: 1;
+//   animation-duration: 0.65s;
+//   animation-name: easeOutBounce;
+//   animation-fill-mode: forwards;
+//   transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+// }
+
+// #mainnav a {
+//   text-decoration: none;
+//   color: #ffffff;
+// }
+
+// #mainnav i {
+//   border: 2px solid #ffffff;
+//   padding: 0.5em;
+//   border-radius: 50%;
+//   background-color: black;
+//   transition: transform 0.6s ease-in-out;
+// }
+
+// #mainnav span {
+//   color: #c13237;
+//   padding: 0.35em;
+//   margin-left: 0.5em;
+//   border-radius: 0.2em;
+//   font-weight: 600;
+//   font-size: 0.65em;
+//   transition: 0.3s;
+//   background: #fff;
+//   opacity: 0;
+//   position: relative;
+//   transform: translateY(5px);
+//   transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+// }
+
+// #mainnav span:before {
+//   content: "";
+//   width: 0px;
+//   height: 0px;
+//   position: absolute;
+//   left: -0.4em;
+//   top: 50%;
+//   margin-top: -0.5em;
+//   border-style: solid;
+//   border-width: 0.5em 0.5em 0.5em 0;
+//   border-color: transparent #ffffff transparent transparent;
+//   transform: translateY(-5px);
+//   transition: transform 0.2s ease-in-out;
+// }
+
+// /* Imitates jQuery UI's ease-out-bounce animation effect */
+// @keyframes easeOutBounce {
+//   0% {
+//     font-size: 0;
+//     // transform: translateY(30px);
+//   }
+//   17% {
+//     font-size: 0.35em;
+//     // transform: translateY(0);
+//   }
+//   27% {
+//     font-size: 0.55em;
+//     // transform: translateY(0);
+//   }
+//   37% {
+//     font-size: 0.75em;
+//     // transform: translateY(0);
+//   }
+//   57% {
+//     font-size: 0.95em;
+//     // transform: translateY(0);
+//   }
+
+//   65% {
+//     font-size: 1.2125em;
+//   }
+
+//   82% {
+//     font-size: 1.63275em;
+//   }
+//   91% {
+//     font-size: 1.73275em;
+//   }
+//   96% {
+//     font-size: 1.74275em;
+//   }
+//   100% {
+//     font-size: 1.75em;
+//     opacity: 1;
+//     transform: translateY(0);
+//   }
+// }
+
+// OPCION DOS
+
+
+
+.clear {
+  clear: both;
+}
+
+.slide-toggle {
+  display: none;
+}
+
+.slidemenu {
+  font-family: arial, sans-serif;
+  max-width: 600px;
+  // margin: 50px auto;
+  overflow: hidden;
+  position: fixed;
+  bottom: 0; /* Coloca el menú en la parte inferior de la pantalla */
+  left: 0;
+  width: 100%;
+  background: #2c272757; /* Agrega un fondo blanco para el menú */
+}
+
+.slidemenu label {
+  width: 33%;
+  text-align: center;
+  display: block;
+  float: left;
+  color: #333;
+  opacity: 0.7;
+}
+
+.slidemenu label:hover {
+  cursor: pointer;
+  color: #faf8f8;
+}
+
+.slidemenu label span {
+  display: block;
+  padding: 10px;
+  color: #faf8f8;
+}
+
+.slidemenu label .icon {
+  font-size: 18px;
+  // border: solid 0.2px #8d898986;
+  text-align: center;
+  height: 43px;
+  width: 43px;
+  display: block;
+  margin: 0 auto;
+  line-height: 43px;
+  border-radius: 50%;
+  color: #faf8f8;
+}
+
+/* Bar Style */
+
+.slider {
+  width: 100%;
+  height: 4px;
+  display: block;
+  background: #f3f2f2;
+   margin-top: 1px;
+  border-radius: 5px;
+}
+
+.slider .bar {
+  width: 23%;
+  height: 5px;
+  background: #e70909c2;
+  border-radius: 5px;
+}
+
+/* Animations */
+.slidemenu label,
+.slider .bar {
+  transition: all 500ms ease-in-out;
+  -webkit-transition: all 500ms ease-in-out;
+  -moz-transition: all 500ms ease-in-out;
+}
+
+/* Toggle */
+
+.slidemenu .slide-toggle:checked + label {
+   .icon {
+    border: solid 0.2px #fffffff5;
+    font-size: 23.5px;
+    font-weight: 500;
+  }
+  opacity: 1;
+}
+
+.slidemenu #slide-item-1:checked ~ .slider .bar {
+  margin-left: 5%;
+}
+.slidemenu #slide-item-2:checked ~ .slider .bar {
+  margin-left: 38%;
+}
+.slidemenu #slide-item-3:checked ~ .slider .bar {
+  margin-left: 71%;
+}
+// .slidemenu #slide-item-4:checked ~ .slider .bar {
+//   margin-left: 75%;
+// }
+
+/* Clearfix for mobile */
+@media (max-width: 767px) {
+  .clear {
+    display: block;
+    clear: both;
+  }
+}
+
+nav.slidemenu {
+  display: none;
+}
+
+/* Show menu on mobile */
+@media (max-width: 767px) {
+  nav.slidemenu {
+    display: block;
+  }
+}
+

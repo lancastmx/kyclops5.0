@@ -1,0 +1,43 @@
+<!-- <nav id="mainnav" role="navigation">
+  <ul>
+    <li><a href="#"><i class="fa fa-podcast"></i><span>Podcast</span></a></li>
+    <li><a href="#"><i class="fa fa-headphones"></i><span>Artistas</span></a></li>
+    <li><a href="#"><i class="fa fa-calendar"></i><span>Eventos</span></a></li>
+    <li><a href="#"><i class="fa fa-map-pin"></i><span>Venues</span></a></li>
+    <li><a (click)="toggleNavItems()"><i class="fa fa-bars"></i></a></li>
+  </ul>
+</nav> -->
+
+
+<!-- OPCION DOS -->
+
+<nav class="slidemenu">
+
+  <!-- Item 1 -->
+  <input type="radio" name="slideItem" id="slide-item-1" class="slide-toggle" checked/>
+  <label for="slide-item-1"><p class="icon"><i class="fa fa-database" aria-hidden="true"></i>
+  </p></label>
+
+  <!-- Item 2 -->
+  <input type="radio" name="slideItem" id="slide-item-2" class="slide-toggle" />
+  <label for="slide-item-2" onclick="location.href='#podcast'">
+    <p class="icon"><i class="fa fa-music" aria-hidden="true"></i></p>
+  </label>
+
+
+  <!-- Item 3 -->
+  <input type="radio" name="slideItem" id="slide-item-3" class="slide-toggle"/>
+  <label for="slide-item-3"><p class="icon"><i class="fa fa-plug" aria-hidden="true"></i></p></label>
+
+  <!-- Item 4 -->
+  <!-- <input type="radio" name="slideItem" id="slide-item-4" class="slide-toggle"/>
+  <label for="slide-item-4"><p class="icon">✎</p></label> -->
+
+  <div class="clear"></div>
+
+  <!-- Bar -->
+  <div class="slider">
+    <div class="bar"></div>
+  </div>
+
+</nav>

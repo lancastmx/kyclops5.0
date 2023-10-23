@@ -1,0 +1,24 @@
+<div class="">
+
+  <ngx-slick-carousel class="corousel pe-0"
+  #slickModal="slick-carousel"
+  [config]="slideConfig">
+
+  <div ngxSlickItem *ngFor="let slide of slides" class="slide">
+    <div class="card m-1">
+      <div class="card-img">
+        <img src="{{slide.img}}"alt="" class="img-fluid">
+      </div>
+      <div class="bar">
+        <div class="emptybar"></div>
+        <div class="filledbar"></div>
+      </div>
+          <div class="icon d-flex justify-content-center">
+        <img src="assets/img/ojo230.svg" alt="">
+      </div>
+    </div>
+  </div>
+
+</ngx-slick-carousel>
+</div>
+

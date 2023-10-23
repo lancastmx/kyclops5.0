@@ -1,0 +1,23 @@
+
+<div class="row m-0 blockquote-footer" >
+<footer class="bg-dark text-center text-white">
+  <div class="container p-4 pb-0">
+    <section class="mb-4">
+      <a class="btn btn-outline-light btn-floating m-1" [href]="spotifyLink" target="_blank" role="button">
+        <i class="fa-brands fa-spotify"></i>
+      </a>
+      <a class="btn btn-outline-light btn-floating m-1" [href]="messengerLink" target="_blank"  role="button">
+        <i class="fa-brands fa-facebook-messenger"></i></a>
+      <a class="btn btn-outline-light btn-floating m-1" [routerLink]="['/bandas']" role="button">
+        <i class="fab fa-google"></i>
+      </a>
+      <a class="btn btn-outline-light btn-floating m-1" [href]="instagramLink" target="_blank"  role="button"><i class="fab fa-instagram"></i></a>
+      <a class="btn btn-outline-light btn-floating m-1" [href]="linkedinLink" target="_blank"  role="button"><i class="fab fa-linkedin-in"></i></a>
+    </section>
+  </div>
+  <div class=" row d-flex flex-column p-2" style="background-color: rgba(0, 0, 0, 0.2);">
+    {{ copyright }}<br>
+    <a class="text-light" [routerLink]="['/pruebas']" role="button">Politica de privacidad</a>
+  </div>
+</footer>
+</div>

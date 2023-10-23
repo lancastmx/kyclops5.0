@@ -1,0 +1,34 @@
+<div class="row">
+  <div class="menu-icon" id="menu-icon" (click)="toggleMenu()">
+    <i class="fa fa-bars" aria-hidden="true"></i>
+  </div>
+  <div class="menu">
+    <div class="s menu-wrap">
+
+    </div>
+    <div class="menu-overlay">
+      <div class="menu-item ">
+        <a data-item="Live" [routerLink]="['/radio']" (click)="closeMenu()">Live</a><span
+        class="badge-sonar "></span>
+      </div>
+      <div class="menu-item">
+        <a data-item="Kyclops" [routerLink]="['/nosotros']" (click)="closeMenu()">Kyclops</a>
+      </div>
+      <div class="menu-item">
+        <a data-item="Bandas" [routerLink]="['/bandas']" (click)="closeMenu()">Bandas</a>
+      </div>
+      <div class="menu-item">
+        <a data-item="Conecta" [routerLink]="['/contacto']" (click)="closeMenu()">Conecta</a>
+      </div>
+    </div>
+    <div class="menu-item social-icons ">
+      <a href="" class="social-link mb-2"><i class="fab fa-facebook" ></i></a>
+      <a href="" class="social-link mb-2"><i class="fab fa-twitter"></i></a>
+      <a href="" class="social-link mb-2"><i class="fab fa-instagram"></i></a>
+      <a href="" class="social-link"><i class="fab fa-google "></i></a>
+
+    </div>
+  </div>
+
+</div>
+

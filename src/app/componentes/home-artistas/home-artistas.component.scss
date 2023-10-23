@@ -1,0 +1,45 @@
+/* Estilos generales */
+.slick-prev:before, .slick-next:before {
+  color: black !important;
+}
+
+/* Estilos para pantallas de celular */
+@media (max-width: 425px) {
+  #carousel {
+  }
+  .img-style {
+    margin-left: auto;
+    margin-right: auto;
+    height: 180px;
+    width: 180px;
+  }
+  h1 {
+    color: brown;
+  }
+}
+
+/* Estilos para pantallas de tablet */
+@media (min-width: 426px) and (max-width: 768px) {
+  .img-style {
+    margin-left: 20px !important;
+    margin-right: 20px !important;
+    height: 100px;
+    width: 100px;
+  }
+  h1 {
+    color: blue;
+  }
+}
+
+/* Estilos para pantallas de escritorio */
+@media (min-width: 769px) {
+  .img-style {
+    margin-left: 10px !important;
+    margin-right: 10px !important;
+    height: 250px;
+    width: 250px;
+  }
+  h1 {
+    color: green;
+  }
+}

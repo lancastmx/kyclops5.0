@@ -1,0 +1,35 @@
+/* what-button.component.scss */
+.btn-floating {
+  position: fixed;
+  bottom: 59px;
+  right: -1px;
+  z-index: 9; /* Asegura que el botón esté por encima de otros elementos */
+  border-radius: 5px 5px 5px 50px; /* Para darle forma circular al botón */
+  animation: fadeInDown 0.5s ease;
+  background-color:  #146ebe; /* Agregar animación de entrada */
+  transition: transform 0.3s ease; /* Agregar transición suave al cambio de transformación */
+
+  &:active {
+    transform: rotate(45deg); /* Girar el botón al hacer clic */
+  }
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.977);
+    color: #146ebe;
+     /* Cambiar el color de fondo al pasar el mouse */
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    transform: translate3d(0, 100%, 0);
+    opacity: 0;
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+i
+{
+  font-size: 30px;
+}
